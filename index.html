@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VELORA — Small Business Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-mark">V</div>
+
+            <div>
+                <h2>VELORA</h2>
+                <span>BUSINESS OS</span>
+            </div>
+        </div>
+
+
+        <div class="menu-title">
+            ASOSIY
+        </div>
+
+        <nav class="navigation">
+
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">▦</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">↗</span>
+                <span>Sotuvlar</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">▣</span>
+                <span>Mahsulotlar</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">♙</span>
+                <span>Mijozlar</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span>Tranzaksiyalar</span>
+            </a>
+
+
+            <div class="menu-title second">
+                BOSHQARUV
+            </div>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">▤</span>
+                <span>Hisobotlar</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Sozlamalar</span>
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <div class="support-card">
+
+                <div class="support-icon">
+                    ?
+                </div>
+
+                <div>
+                    <strong>Yordam kerakmi?</strong>
+                    <small>Support markazi</small>
+                </div>
+
+            </div>
+
+
+            <div class="system-status">
+
+                <span class="online-dot"></span>
+
+                <span>System Online</span>
+
+            </div>
+
+
+            <div class="version">
+                VELORA v1.0
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="topbar">
+
+            <div class="page-heading">
+
+                <span class="eyebrow">
+                    SMALL BUSINESS
+                </span>
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Biznesingiz holatini bir joydan boshqaring.
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button
+                    class="notification-button"
+                    onclick="showNotification('Yangi bildirishnomalar yo‘q')"
+                >
+                    <span>♢</span>
+                    <i></i>
+                </button>
+
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        J
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>Jadra</strong>
+
+                        <span>Administrator</span>
+
+                    </div>
+
+                    <span class="profile-arrow">
+                        ▾
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="quick-actions">
+
+            <button
+                class="primary-button"
+                onclick="openTransactionModal()"
+            >
+                <span>＋</span>
+                Yangi tranzaksiya
+            </button>
+
+            <button
+                class="secondary-button"
+                onclick="showNotification('Hisobot tayyorlanmoqda...')"
+            >
+                ↓ Eksport
+            </button>
+
+            <div class="period-selector">
+
+                <button class="period active">
+                    7 kun
+                </button>
+
+                <button class="period">
+                    30 kun
+                </button>
+
+                <button class="period">
+                    1 yil
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STAT CARDS ================= -->
+
+        <section class="stats-grid">
+
+
+            <!-- REVENUE -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon gold">
+                        ₿
+                    </div>
+
+                    <span class="trend positive">
+                        ↑ 12.8%
+                    </span>
+
+                </div>
+
+                <div class="stat-label">
+                    Umumiy daromad
+                </div>
+
+                <div class="stat-value">
+                    $24,680.00
+                </div>
+
+                <div class="stat-bottom">
+                    O‘tgan oyga nisbatan
+                </div>
+
+            </div>
+
+
+            <!-- PROFIT -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon green">
+                        ↗
+                    </div>
+
+                    <span class="trend positive">
+                        ↑ 8.4%
+                    </span>
+
+                </div>
+
+                <div class="stat-label">
+                    Sof foyda
+                </div>
+
+                <div class="stat-value">
+                    $8,420.00
+                </div>
+
+                <div class="stat-bottom">
+                    Foyda marjasi 34.1%
+                </div>
+
+            </div>
+
+
+            <!-- EXPENSE -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon red">
+                        ↘
+                    </div>
+
+                    <span class="trend negative">
+                        ↑ 4.2%
+                    </span>
+
+                </div>
+
+                <div class="stat-label">
+                    Xarajatlar
+                </div>
+
+                <div class="stat-value">
+                    $6,280.00
+                </div>
+
+                <div class="stat-bottom">
+                    Jami biznes xarajatlari
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOMERS -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon blue">
+                        ♙
+                    </div>
+
+                    <span class="trend positive">
+                        ↑ 15.6%
+                    </span>
+
+                </div>
+
+                <div class="stat-label">
+                    Mijozlar
+                </div>
+
+                <div class="stat-value">
+                    1,284
+                </div>
+
+                <div class="stat-bottom">
+                    +172 yangi mijoz
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CHART SECTION ================= -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- REVENUE CHART -->
+
+            <div class="panel revenue-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            MOLIYAVIY ANALITIKA
+                        </span>
+
+                        <h2>Daromad va xarajatlar</h2>
+
+                    </div>
+
+
+                    <div class="chart-legend">
+
+                        <span>
+                            <i class="legend revenue"></i>
+                            Daromad
+                        </span>
+
+                        <span>
+                            <i class="legend expense"></i>
+                            Xarajat
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="chart-summary">
+
+                    <strong>
+                        $24,680
+                    </strong>
+
+                    <span>
+                        +12.8% bu oy
+                    </span>
+
+                </div>
+
+
+                <div class="chart-container">
+
+                    <canvas id="revenueChart"></canvas>
+
+                </div>
+
+            </div>
+
+
+            <!-- SALES DISTRIBUTION -->
+
+            <div class="panel distribution-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            SAVDO TAQSIMOTI
+                        </span>
+
+                        <h2>Kategoriyalar</h2>
+
+                    </div>
+
+                    <button
+                        class="more-button"
+                        onclick="showNotification('Barcha kategoriyalar ko‘rsatilmoqda')"
+                    >
+                        •••
+                    </button>
+
+                </div>
+
+
+                <div class="donut-wrapper">
+
+                    <canvas id="categoryChart"></canvas>
+
+                    <div class="donut-center">
+
+                        <strong>
+                            $24.6K
+                        </strong>
+
+                        <span>
+                            Jami savdo
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-list">
+
+                    <div class="category-item">
+
+                        <span>
+                            <i class="category-dot dot-one"></i>
+                            IT xizmatlar
+                        </span>
+
+                        <strong>
+                            42%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="category-item">
+
+                        <span>
+                            <i class="category-dot dot-two"></i>
+                            Dizayn
+                        </span>
+
+                        <strong>
+                            28%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="category-item">
+
+                        <span>
+                            <i class="category-dot dot-three"></i>
+                            Konsalting
+                        </span>
+
+                        <strong>
+                            18%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="category-item">
+
+                        <span>
+                            <i class="category-dot dot-four"></i>
+                            Boshqa
+                        </span>
+
+                        <strong>
+                            12%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LOWER GRID ================= -->
+
+        <section class="lower-grid">
+
+
+            <!-- TRANSACTIONS -->
+
+            <div class="panel transactions-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            TRANZAKSIYALAR
+                        </span>
+
+                        <h2>So‘nggi operatsiyalar</h2>
+
+                    </div>
+
+
+                    <button
+                        class="view-all"
+                        onclick="showNotification('Barcha tranzaksiyalar ochildi')"
+                    >
+                        Barchasini ko‘rish →
+                    </button>
+
+                </div>
+
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="transactionSearch"
+                        placeholder="Tranzaksiyani qidirish..."
+                    >
+
+                </div>
+
+
+                <div class="transaction-list"
+                     id="transactionList">
+
+
+                    <!-- TRANSACTION 1 -->
+
+                    <div class="transaction">
+
+                        <div class="transaction-icon income">
+                            ↗
+                        </div>
+
+                        <div class="transaction-info">
+
+                            <strong>
+                                Web Development
+                            </strong>
+
+                            <span>
+                                Bugun, 10:24
+                            </span>
+
+                        </div>
+
+                        <div class="transaction-client">
+                            Velora Group
+                        </div>
+
+                        <div class="transaction-amount income-text">
+                            +$2,450.00
+                        </div>
+
+                        <span class="transaction-status paid">
+                            To‘langan
+                        </span>
+
+                    </div>
+
+
+                    <!-- TRANSACTION 2 -->
+
+                    <div class="transaction">
+
+                        <div class="transaction-icon expense">
+                            ↘
+                        </div>
+
+                        <div class="transaction-info">
+
+                            <strong>
+                                Office Rent
+                            </strong>
+
+                            <span>
+                                Kecha, 16:42
+                            </span>
+
+                        </div>
+
+                        <div class="transaction-client">
+                            City Business
+                        </div>
+
+                        <div class="transaction-amount expense-text">
+                            -$850.00
+                        </div>
+
+                        <span class="transaction-status pending">
+                            Kutilmoqda
+                        </span>
+
+                    </div>
+
+
+                    <!-- TRANSACTION 3 -->
+
+                    <div class="transaction">
+
+                        <div class="transaction-icon income">
+                            ↗
+                        </div>
+
+                        <div class="transaction-info">
+
+                            <strong>
+                                UI/UX Design
+                            </strong>
+
+                            <span>
+                                28 Sen, 14:20
+                            </span>
+
+                        </div>
+
+                        <div class="transaction-client">
+                            Tech Solutions
+                        </div>
+
+                        <div class="transaction-amount income-text">
+                            +$1,780.00
+                        </div>
+
+                        <span class="transaction-status paid">
+                            To‘langan
+                        </span>
+
+                    </div>
+
+
+                    <!-- TRANSACTION 4 -->
+
+                    <div class="transaction">
+
+                        <div class="transaction-icon expense">
+                            ↘
+                        </div>
+
+                        <div class="transaction-info">
+
+                            <strong>
+                                Reklama
+                            </strong>
+
+                            <span>
+                                27 Sen, 11:05
+                            </span>
+
+                        </div>
+
+                        <div class="transaction-client">
+                            Meta Ads
+                        </div>
+
+                        <div class="transaction-amount expense-text">
+                            -$320.00
+                        </div>
+
+                        <span class="transaction-status paid">
+                            To‘langan
+                        </span>
+
+                    </div>
+
+
+                    <!-- TRANSACTION 5 -->
+
+                    <div class="transaction">
+
+                        <div class="transaction-icon income">
+                            ↗
+                        </div>
+
+                        <div class="transaction-info">
+
+                            <strong>
+                                Consulting
+                            </strong>
+
+                            <span>
+                                26 Sen, 09:45
+                            </span>
+
+                        </div>
+
+                        <div class="transaction-client">
+                            Nova Company
+                        </div>
+
+                        <div class="transaction-amount income-text">
+                            +$1,250.00
+                        </div>
+
+                        <span class="transaction-status paid">
+                            To‘langan
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT COLUMN -->
+
+            <div class="right-column">
+
+
+                <!-- BUSINESS GOAL -->
+
+                <div class="panel goal-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                MAQSAD
+                            </span>
+
+                            <h2>Oylik daromad</h2>
+
+                        </div>
+
+                        <span class="goal-icon">
+                            🎯
+                        </span>
+
+                    </div>
+
+
+                    <div class="goal-value">
+
+                        <strong>
+                            $24,680
+                        </strong>
+
+                        <span>
+                            / $30,000
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width:82.3%"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="goal-footer">
+
+                        <span>
+                            82.3% bajarildi
+                        </span>
+
+                        <strong>
+                            $5,320 qoldi
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOP PRODUCTS -->
+
+                <div class="panel products-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                MAHSULOTLAR
+                            </span>
+
+                            <h2>Eng ko‘p sotilgan</h2>
+
+                        </div>
+
+                        <button
+                            class="more-button"
+                            onclick="showNotification('Mahsulotlar bo‘limi ochildi')"
+                        >
+                            •••
+                        </button>
+
+                    </div>
+
+
+                    <div class="product-list">
+
+
+                        <div class="product">
+
+                            <div class="product-number">
+                                01
+                            </div>
+
+                            <div class="product-info">
+
+                                <strong>
+                                    Web Development
+                                </strong>
+
+                                <span>
+                                    48 ta buyurtma
+                                </span>
+
+                            </div>
+
+                            <strong class="product-price">
+                                $8,420
+                            </strong>
+
+                        </div>
+
+
+                        <div class="product">
+
+                            <div class="product-number">
+                                02
+                            </div>
+
+                            <div class="product-info">
+
+                                <strong>
+                                    UI/UX Design
+                                </strong>
+
+                                <span>
+                                    31 ta buyurtma
+                                </span>
+
+                            </div>
+
+                            <strong class="product-price">
+                                $5,680
+                            </strong>
+
+                        </div>
+
+
+                        <div class="product">
+
+                            <div class="product-number">
+                                03
+                            </div>
+
+                            <div class="product-info">
+
+                                <strong>
+                                    Consulting
+                                </strong>
+
+                                <span>
+                                    24 ta buyurtma
+                                </span>
+
+                            </div>
+
+                            <strong class="product-price">
+                                $4,280
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- CASH FLOW -->
+
+                <div class="cash-card">
+
+                    <div class="cash-content">
+
+                        <span>
+                            BUGUNGI CASH FLOW
+                        </span>
+
+                        <strong>
+                            +$3,280
+                        </strong>
+
+                        <small>
+                            Kechagi kundan +18.4%
+                        </small>
+
+                    </div>
+
+                    <div class="cash-icon">
+                        ↗
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ================= MODAL ================= -->
+
+<div
+    class="modal-overlay"
+    id="transactionModal"
+>
+
+    <div class="modal">
+
+        <button
+            class="close-modal"
+            onclick="closeTransactionModal()"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-header">
+
+            <span class="panel-label">
+                YANGI OPERATSIYA
+            </span>
+
+            <h2>Tranzaksiya qo‘shish</h2>
+
+            <p>
+                Yangi daromad yoki xarajatni kiriting.
+            </p>
+
+        </div>
+
+
+        <form id="transactionForm">
+
+
+            <div class="form-group">
+
+                <label>
+                    Turi
+                </label>
+
+                <div class="type-buttons">
+
+                    <label class="type-option active">
+
+                        <input
+                            type="radio"
+                            name="transactionType"
+                            value="income"
+                            checked
+                        >
+
+                        <span>Daromad</span>
+
+                    </label>
+
+
+                    <label class="type-option">
+
+                        <input
+                            type="radio"
+                            name="transactionType"
+                            value="expense"
+                        >
+
+                        <span>Xarajat</span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Nomi
+                </label>
+
+                <input
+                    type="text"
+                    id="newTransactionName"
+                    placeholder="Masalan: Web Design"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        Mijoz / Kompaniya
+                    </label>
+
+                    <input
+                        type="text"
+                        id="newTransactionClient"
+                        placeholder="Mijoz nomi"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Summa
+                    </label>
+
+                    <input
+                        type="number"
+                        id="newTransactionAmount"
+                        placeholder="0"
+                        min="0"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Holat
+                </label>
+
+                <select id="newTransactionStatus">
+
+                    <option value="To‘langan">
+                        To‘langan
+                    </option>
+
+                    <option value="Kutilmoqda">
+                        Kutilmoqda
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="modal-submit"
+            >
+                Tranzaksiyani saqlash
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= NOTIFICATION ================= -->
+
+<div
+    class="toast"
+    id="toast"
+>
+    <span>✓</span>
+    <p>Amal muvaffaqiyatli bajarildi.</p>
+</div>
+
+
+<!-- CHART.JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
